@@ -44,3 +44,9 @@ npm run make-report
 npm run report-local
 ``````
 
+## Para visualizar o relatorio use o comando abaixo: 
+
+``````
+npm run report-local
+``````
+Obs: Após o comando para visualizar o report, vai ser gerado um link para que possa ser acessado localmente. 
