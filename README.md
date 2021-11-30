@@ -37,14 +37,14 @@ npm i
 ##### Utilize o seguinte comando para executar o cenário de teste: 
 
 ``````
-npm run test
+npm run test (Todos os navegadores em headless)
+npm run headed-firefox (Somete um navegador(FireFox "com cabeça")
 ``````
 
 ## Para gerar o relatorio use os comandos abaixo: 
 
 ``````
 npm run make-report
-npm run report-local
 ``````
 
 ## Para visualizar o relatorio use o comando abaixo: 
