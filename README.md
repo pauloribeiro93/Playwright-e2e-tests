@@ -12,8 +12,8 @@ Node.js (https://nodejs.org/en/)
 
 ### :package: Packages 
 
-- @playwright/test": "^1.16.3"
-- faker: "^5.5.3"
+- Playwright: "^1.16.3"
+- Faker: "^5.5.3"
 
 ##### Clone o projeto do GitHub em um diretório:
 
