@@ -28,3 +28,19 @@ git clone https://github.com/pauloribeiro93/Playwright-e2e-tests.git
 ```
 npm i
 ```
+
+## ⚙️ Executando os testes
+
+##### Utilize o seguinte comando para executar o cenário de teste: 
+
+``````
+npm run test
+``````
+
+## Para gerar o relatorio use os comandos abaixo: 
+
+``````
+npm run make-report
+npm run report-local
+``````
+
