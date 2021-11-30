@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
+    "test": "npx playwright test",
+    "headed-firefox": "npx playwright test --headed --project=firefox",
     "make-report": "npx playwright test --project=firefox --reporter=html",
     "report-local": "npx node-static playwright-report"
   },
