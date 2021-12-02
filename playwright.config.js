@@ -7,7 +7,7 @@ const config = {
   
   use: {
     trace: 'on-first-retry',
-    // headless: false,
+    headless: false,
     baseURL:'http://automationpractice.com/index.php',
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
