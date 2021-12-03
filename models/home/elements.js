@@ -1,4 +1,4 @@
 exports.ELEMENTS = {
-    butonLogin:'.login'
+    buttonLogin:'.login'
 }
 

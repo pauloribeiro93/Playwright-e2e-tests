@@ -7,7 +7,7 @@ exports.HomePage = class HomePage {
     }
 
     async clickLogin() {
-    await this.page.locator(ELEMENTS.butonLogin).click()
+    await this.page.locator(ELEMENTS.buttonLogin).click()
       
     }
   };
