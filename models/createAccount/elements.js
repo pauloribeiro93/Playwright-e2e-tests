@@ -1,0 +1,22 @@
+exports.ELEMENTS = {
+    idGender1:'#id_gender1',
+    custumerFristname: '#customer_firstname',
+    customerLastname: '#customer_lastname',
+    password: '#passwd',
+    days: '#days',
+    months: '#months',
+    years:'#years',
+    firstName:'#firstname',
+    lastName:'#lastname',
+    company:'#company',
+    adress1:'#address1',
+    idCountry: '#id_country',
+    idState:'#id_state',
+    phoneMobile:'#phone_mobile',
+    city:'#city',
+    postcode: '#postcode',
+    alias: '#alias',
+    submitAccount:'#submitAccount',
+    heading:'.page-heading',
+}
+
