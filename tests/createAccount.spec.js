@@ -30,6 +30,7 @@ test('Test Create New Account @smoke', async ({ page }) => {
     await myAccount.fillEmailCreate(email)
     await myAccount.submitCreate()
 
+    await createAccount.checkHeading('Create an account')
     await createAccount.fillForm(firstName,lastName,company,address,password,mobilePhone,
       city,zipcode,aliasAdress)
 
