@@ -2,9 +2,7 @@ const { expect, } = require('@playwright/test');
 const ELEMENTS = require('./elements').ELEMENTS
 
 exports.CreateAccountPage = class CreateAccountPage {
-     /**
-     * 
-     */ 
+   
     constructor(page) {
       this.page = page;
     }
