@@ -32,6 +32,4 @@ jobs:
     - name: Install Dependencies
       run: npx playwright install 
     - name: Run Playwright tests
-      uses: microsoft/playwright-github-action@v1.5.0
-    - name: Run Test  
-      run: npm make-report
+      run: npm test
