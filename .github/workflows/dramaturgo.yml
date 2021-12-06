@@ -30,8 +30,7 @@ jobs:
         with:
          name: test-artifacts
          path: test-results
-      
-      - name: Artefato Relatorio   
+        
       - uses: actions/upload-artifact@v2
         if: ${{ always() }}
         with:
