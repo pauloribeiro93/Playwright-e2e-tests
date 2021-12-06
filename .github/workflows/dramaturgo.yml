@@ -28,6 +28,6 @@ jobs:
       with:
        node-version: '14'
     - name: Install operating system dependencies
-      run: npx playwright install-deps
+      run: npm i
     - name: Run your tests
       run: npm test
