@@ -11,16 +11,28 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v1
-
-      #- uses: microsoft/playwright-github-action@v1
-      - name: Install Deps
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          
+      - name: Playwright Install Deps
         run: npx playwright install-deps
-      - name: Install dependencies and run tests
-        run: npm install && xvfb-run --auto-servernum - npm run make-report
+        
+      - name: Install dependencies  
+        run: npm install
+        
+      - name: Run tests
+        run: xvfb-run --auto-servernum -- npm run make-report
 
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+         name: test-artifacts
+         path: test-results
+         
       - uses: actions/upload-artifact@v2
         if: ${{ always() }}
         with:
          name: test-artifacts
-         path: test-results
+         path: playwright-report
+     
