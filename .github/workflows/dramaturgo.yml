@@ -38,7 +38,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           
       # Instalando as dependencias  
-      - run: npm install
+      - run: npx playwright install-deps
       
       # Relatorio e teste
       - run: npm run make-report
