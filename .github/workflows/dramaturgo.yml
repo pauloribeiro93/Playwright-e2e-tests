@@ -34,4 +34,4 @@ jobs:
     - name: Run Playwright tests
       uses: microsoft/playwright-github-action@v1.5.0
     - name: Run Test  
-      run: npm run make-report
+      run: npm make-report
