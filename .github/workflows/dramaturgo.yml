@@ -27,11 +27,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
        node-version: '14.x'
-    - name: Install operating system dependencies
-      run: npx playwright install --with-deps
-    - name: Install operating system dependencies
-      run: npx playwright install --with-deps
-   # - name: Command to download new browsers
-   #   run:  npx playwright install  
-    - name: Run your tests
-      run: npm test
+    - name: Install Dependencies
+      run: npm install
+    - name: Run Playwright tests
+      uses: microsoft/playwright-github-action@v1.5.0
