@@ -1,3 +1,5 @@
+![fluxo de trabalho de exemplo](https://github.com/pauloribeiro93/Playwright-e2e-tests/actions/workflows/dramaturgo.yml/badge.svg)
+
 # 🎭 Playwright 
 
 
