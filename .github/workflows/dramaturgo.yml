@@ -13,10 +13,9 @@ jobs:
 
       - uses: actions/setup-node@v1
 
-      - uses: microsoft/playwright-github-action@v1
-
-      - name: Navegador
-        run: npx playwright install
+      #- uses: microsoft/playwright-github-action@v1
+      - name: Install Deps
+        run: npx playwright install-dep
       - name: Install dependencies and run tests
         run: npm install && xvfb-run --auto-servernum -- npm test
 
