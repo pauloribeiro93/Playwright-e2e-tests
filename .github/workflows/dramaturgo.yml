@@ -23,8 +23,7 @@ jobs:
         
       - name: Run tests
         run: xvfb-run --auto-servernum -- npm run make-report
-      
-      - name: Artefatos de Teste 
+        
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
