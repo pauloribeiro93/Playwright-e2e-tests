@@ -17,7 +17,7 @@ jobs:
       - name: Install Deps
         run: npx playwright install-deps
       - name: Install dependencies and run tests
-        run: npm install && npm run make-report
+        run: npm install && xvfb-run --auto-servernum - npm run make-report
 
       - uses: actions/upload-artifact@v2
         if: ${{ always() }}
