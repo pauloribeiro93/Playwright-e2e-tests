@@ -22,46 +22,12 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     
-    strategy:
-      matrix:
-        node-version: [14]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Setup Node.js
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.2.0
-        with:
-          node-version: ${{ matrix.node-version }}
-          
-      # Instalando as dependencias  
-      - run: npx playwright install-deps
-      
-      # Relatorio e teste
-      - run: npm run make-report
-             
-      
-      #artefatos
-      - name: Upload Screenshots
-        uses: actions/upload-artifact@v2.2.4
-        if: failure()
-        with:
-          name: screenshots
-          path: test-results
-          
-      - name: Upload Videos
-        uses: actions/upload-artifact@v2.2.4
-        if: failure()
-        with:
-          name: videos
-          path: test-results
-          
-      - name: Relatorio
-        uses: actions/upload-artifact@v2.2.4
-        if: always()
-        with:
-          name: report 
-          path: playwright-report
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+       node-version: '14'
+    - name: Install operating system dependencies
+      run: npx playwright install-deps
+    - name: Run your tests
+      run: npm test
