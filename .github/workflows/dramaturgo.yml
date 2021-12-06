@@ -1,34 +1,25 @@
-# This is a basic workflow to help you get started with Actions
-
-name: dramaturgo_CI
-
-# Controls when the workflow will run
+name: dramaturgo_CI 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  schedule:
-    - cron: '50 3 * * 5'
+    branches:
+    - main
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  test_linux:
-    name: ${{ matrix.os }} (${{ matrix.browser }})
-    strategy:
-      fail-fast: false
-      matrix:
-        browser: [chromium, firefox, webkit]
-        os: [ubuntu-18.04]
-    runs-on: ${{ matrix.os }}
+  e2e-tests:
+    runs-on: ubuntu-latest # or macos-latest, windows-latest
+
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 12
-    - run: npm i -g npm@8
-    - run: npm ci
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+
+      - uses: microsoft/playwright-github-action@v1
+
+      - name: Install dependencies and run tests
+        run: npm install && npm test
+
+      - uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+         name: test-artifacts
+         path: path/to/artifacts
