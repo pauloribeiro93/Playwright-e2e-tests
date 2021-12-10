@@ -33,6 +33,8 @@ git clone https://github.com/pauloribeiro93/Playwright-e2e-tests.git
 ```
 npm i
 ```
+
+##### :runner: Execute o seguinte comando para instalar os navegadores
 ````
 npx playwright install
 ````
