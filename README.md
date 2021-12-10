@@ -33,6 +33,9 @@ git clone https://github.com/pauloribeiro93/Playwright-e2e-tests.git
 ```
 npm i
 ```
+````
+npx playwright install
+````
 
 ## ⚙️ Executando os testes
 
