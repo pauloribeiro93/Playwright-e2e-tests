@@ -1,15 +1,18 @@
-name: dramaturgo_CI 
+name: dramaturgo_CI
+
 on:
   push:
     branches:
     - main
+    
+env:
+  REPORT_FOLDER: playwright-report
+  FOREST_RUN: npx playwright install-deps    
 
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest # or macos-latest, windows-latest
-    env:
-       REPORT_FOLDER: playwright-report
-       FOREST_RUN: npx playwright install-deps
+    
 
     steps:
       - uses: actions/checkout@v2
