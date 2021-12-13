@@ -7,6 +7,8 @@ on:
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest # or macos-latest, windows-latest
+    env:
+       REPORT_FOLDER: playwright-report  
 
     steps:
       - uses: actions/checkout@v2
@@ -42,5 +44,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: playwright-report
+          FOLDER: ${{ REPORT_FOLDER }}
      
