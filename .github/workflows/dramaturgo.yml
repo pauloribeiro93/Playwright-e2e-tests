@@ -8,7 +8,8 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest # or macos-latest, windows-latest
     env:
-       REPORT_FOLDER: playwright-report  
+       REPORT_FOLDER: playwright-report
+       FOREST_RUN: npx playwright install-deps
 
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +19,7 @@ jobs:
           node-version: '14.x'
           
       - name: Playwright Install-Deps
-        run: npx playwright install-deps
+        run: ${{env.FOREST_RUN}}
         
       - name: Install dependencies  
         run: npm install
